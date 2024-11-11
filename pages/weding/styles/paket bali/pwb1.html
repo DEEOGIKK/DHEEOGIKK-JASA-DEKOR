@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WEDDING - BALINESE - PAKET 1</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body id="page">
+    <script src="/main.js"></script>
+    <div class="mainPage">
+        <div class="infoPage" id="infoPage">
+            <h1>SILAHKAN PILIH!</h1>
+
+
+
+            <h2>GAYOR</h2>
+            <div class="container gayor" id="container">
+                <div class="panel" id="p-gyr-1" onclick="selectPanel('gayor', 'p-gyr-1', 'imgs/Wedding/Balinese/Paket 1/Gayor/gayor1.jpg')">
+                    <img src="/imgs/Wedding/Balinese/Paket 1/Gayor/gayor1.jpg">
+                </div>
+                <div class="panel" id="p-gyr-2" onclick="selectPanel('gayor', 'p-gyr-2', 'imgs/Wedding/Balinese/Paket 1/Gayor/gayor2.jpg')">
+                    <img src="/imgs/Wedding/Balinese/Paket 1/Gayor/gayor2.jpg">
+                </div>
+                <div class="panel" id="p-gyr-3" onclick="selectPanel('gayor', 'p-gyr-3', 'imgs/Wedding/Balinese/Paket 1/Gayor/gayor3.jpg')">
+                    <img src="/imgs/Wedding/Balinese/Paket 1/Gayor/gayor3.jpg">
+                </div>
+            </div>
+            
+
+
+            <h2>PELAMINAN</h2>
+            <div class="container pelaminan" id="container">
+                <div class="panel" id="p-pel-1" onclick="selectPanel('pelaminan', 'p-pel-1', 'imgs/Wedding/Balinese/Paket 1/Pelaminan/pel1.jpg')">
+                    <img src="/imgs/Wedding/Balinese/Paket 1/Pelaminan/pel1.jpg">
+                </div>
+                <div class="panel" id="p-pel-2" onclick="selectPanel('pelaminan', 'p-pel-2', 'imgs/Wedding/Balinese/Paket 1/Pelaminan/pel2.jpg')">
+                    <img src="/imgs/Wedding/Balinese/Paket 1/Pelaminan/pel2.jpg">
+                </div>
+                <div class="panel" id="p-pel-3" onclick="selectPanel('pelaminan', 'p-pel-3', 'imgs/Wedding/Balinese/Paket 1/Pelaminan/pel3.jpg')">
+                    <img src="/imgs/Wedding/Balinese/Paket 1/Pelaminan/pel3.jpg">
+                </div>
+            </div>
+
+
+
+            <h2>MEJA TAMU</h2>
+            <div class="container meja_tamu" id="container">
+                <div class="panel" id="p-mta-1" onclick="selectPanel('meja_tamu', 'p-mta-1', 'imgs/Wedding/Balinese/Paket 1/Meja Tamu/mejatamu1.jpg')">
+                    <img src="/imgs/Wedding/Balinese/Paket 1/Meja Tamu/mejatamu1.jpg">
+                </div>
+                <div class="panel" id="p-mta-2" onclick="selectPanel('meja_tamu', 'p-mta-2', 'imgs/Wedding/Balinese/Paket 1/Meja Tamu/mejatamu2.jpg')">
+                    <img src="/imgs/Wedding/Balinese/Paket 1/Meja Tamu/mejatamu2.jpg">
+                </div>
+                <div class="panel" id="p-mta-3" onclick="selectPanel('meja_tamu', 'p-mta-3', 'imgs/Wedding/Balinese/Paket 1/Meja Tamu/mejatamu3.jpg')">
+                    <img src="/imgs/Wedding/Balinese/Paket 1/Meja Tamu/mejatamu3.jpg">
+                </div>
+            </div>
+
+
+
+            <h2>STAND</h2>
+            <div class="container stand" id="container">
+                <div class="panel" id="p-stand-1" onclick="selectPanel('stand', 'p-stand-1', 'imgs/Wedding/Balinese/Paket 1/Stand/stand1.jpeg')">
+                    <img src="/imgs/Wedding/Balinese/Paket 1/Stand/stand1.jpeg">
+                </div>
+                <div class="panel" id="p-stand-2" onclick="selectPanel('stand', 'p-stand-2', 'imgs/Wedding/Balinese/Paket 1/Stand/stand2.jpg')">
+                    <img src="/imgs/Wedding/Balinese/Paket 1/Stand/stand2.jpg">
+                </div>
+                <div class="panel" id="p-stand-3" onclick="selectPanel('stand', 'p-stand-3', 'imgs/Wedding/Balinese/Paket 1/Stand/stand3.jpg')">
+                    <img src="/imgs/Wedding/Balinese/Paket 1/Stand/stand3.jpg">
+                </div>
+            </div>
+
+
+
+            <center>
+                <button class="backbtn" onclick="paketweddingbaliback();">BACK</button>
+                <button class="backbtn" onclick="paketweddingbalisubmit();">SUBMIT</button>
+            </center>
+
+
+        </div>
+        <br>
+        <br>
+        <br>
+    </div>
+</body>
+</html>
+
+<style>
+    body {
+        background-color: rgb(255, 242, 200);
+        color: black;
+    }
+    #container {
+        display: flex;
+        width: 800px;
+        margin: auto;
+        margin-bottom: 100px;
+    }
+    .panel {
+        width: 250px; height: 250px;
+        border-radius: 20px;
+        box-shadow: 5px 5px 10px black;
+        margin: auto;
+        transition: all 0.6s;
+        cursor: pointer;
+        overflow: hidden;
+    }
+    h2 {
+        text-align: center;
+    }
+    .panel img {
+        width: 100%; height: 100%;
+        object-fit: cover;
+    }
+</style>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BIRTHDAY - CASUAL - PAKET 1</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body id="page">
+    <script src="/main.js"></script>
+    <div class="mainPage">
+        <div class="infoPage" id="infoPage">
+            <h1>PILIH STYLE!</h1>
+
+            <div class="container dekor" id="container">
+                <div class="panel" id="pca-dekor-1" onclick="selectPanel('dekor', 'pca-dekor-1', '/imgs/Birthday/Paket 1/d1.jpeg')">
+                    <img src="/imgs/Birthday/Paket 1/d1.jpeg">
+                </div>
+                <div class="panel" id="pca-dekor-2" onclick="selectPanel('dekor', 'pca-dekor-2', '/imgs/Birthday/Paket 1/d2.jpeg')">
+                    <img src="/imgs/Birthday/Paket 1/d2.jpeg">
+                </div>
+                <div class="panel" id="pca-dekor-3" onclick="selectPanel('dekor', 'pca-dekor-3', '/imgs/Birthday/Paket 1/d3.jpeg')">
+                    <img src="/imgs/Birthday/Paket 1/d3.jpeg">
+                </div>
+                
+                <div class="panel" id="pca-dekor-4" onclick="selectPanel('dekor', 'pca-dekor-4', '/imgs/Birthday/Paket 1/d4.jpeg')">
+                    <img src="/imgs/Birthday/Paket 1/d4.jpeg">
+                </div>
+                <div class="panel" id="pca-dekor-5" onclick="selectPanel('dekor', 'pca-dekor-5', '/imgs/Birthday/Paket 1/d5.jpeg')">
+                    <img src="/imgs/Birthday/Paket 1/d5.jpeg">
+                </div>
+                <div class="panel" id="pca-dekor-6" onclick="selectPanel('dekor', 'pca-dekor-6', '/imgs/Birthday/Paket 1/d6.jpeg')">
+                    <img src="/imgs/Birthday/Paket 1/d6.jpeg">
+                </div>
+
+                <div class="panel" id="pca-dekor-7" onclick="selectPanel('dekor', 'pca-dekor-7', '/imgs/Birthday/Paket 1/d7.jpeg')">
+                    <img src="/imgs/Birthday/Paket 1/d7.jpeg">
+                </div>
+                <div class="panel" id="pca-dekor-8" onclick="selectPanel('dekor', 'pca-dekor-8', '/imgs/Birthday/Paket 1/d8.jpeg')">
+                    <img src="/imgs/Birthday/Paket 1/d8.jpeg">
+                </div>
+                <div class="panel" id="pca-dekor-9" onclick="selectPanel('dekor', 'pca-dekor-9', '/imgs/Birthday/Paket 1/d9.jpeg')">
+                    <img src="/imgs/Birthday/Paket 1/d9.jpeg">
+                </div>
+            </div>
+            
+            <center style="margin-top: -50px;">
+                <button class="backbtn" onclick="paketbdayback();">BACK</button>
+                <button class="backbtn" onclick="paketweddingcasualsubmit();">SUBMIT</button>
+            </center>
+        </div>
+        <br>
+        <br>
+        <br>
+    </div>
+</body>
+</html>
+
+<style>
+    body {
+        background-color: rgb(211, 211, 211);
+        color: rgb(0, 0, 0);
+    }
+    #container {
+        display: flex;
+        width: 800px;
+        margin: auto;
+        margin-bottom: 100px;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+    .panel {
+        width: 250px; height: 250px;
+        border-radius: 20px;
+        box-shadow: 5px 5px 10px black;
+        margin: auto;
+        transition: all 0.6s;
+        overflow: hidden;
+        cursor: pointer;
+    }
+    h2 {
+        text-align: center;
+    }
+    .panel img {
+        width: 100%; height: 100%;
+        object-fit: cover;
+    }
+</style>

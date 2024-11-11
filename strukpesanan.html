@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STRUK PESANAN</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body id="page">
+    <div class="mainPage">
+        <div class="panel">
+            <p id="pilihanDekorasi">
+                ANDA MEMESAN DEKORASI WEDDING <span id="style">CASUAL</span> <br>
+                DENGAN PILIHAN DEKORASI :   
+                DEPAN <br>
+                <img src="/">
+                <br>
+                <br>
+                PELAMINAN <br>
+                <img src="/">
+                <br>
+                <br>
+                MEJA TAMU <br>
+                <img src="/">
+                <br>
+                <br>
+                PRASMANAN <br>
+                <img src="/">
+                <br>
+                <br>
+                MOHON LENGKAPI DIBAWAH INI!
+            </p>
+    
+            <div class="input">
+                <input id="nama" type="text" placeholder="nama lengkap"> <br>
+                <input id="no" type="number" placeholder="nomor telpon"> <br>
+                <input id="alamat" type="text" placeholder="alamat lokasi"> <br>
+                <input id="date" type="date" placeholder="tanggal acara"> <br>
+                <br>
+                <center>
+                    <button class="sbtn" style="opacity: 80%;" onclick="kembali();">KEMBALI</button>
+                    <button class="sbtn" onclick="submit()">BUAT PESANAN!</button>
+                </center>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+<script>
+    a = ""
+    bodycolor = ""
+
+    function submit() {
+        nama = document.getElementById("nama").value;
+        no = document.getElementById("no").value;
+        alamat = document.getElementById("alamat").value;
+        date = document.getElementById("date").value;
+
+        console.log(nama + " " +  no + " " +  alamat + " " + date)
+
+        if(nama != "" && no != "" && alamat != "" && date != "") {
+            document.getElementById("page").style.animation = "fadingOut 1s forwards";
+            document.getElementById("page").addEventListener("animationend", function() {
+                document.getElementById("page").style.opacity = 0;
+                window.location.href = "/thanks.html";
+            });
+        }else {
+            alert("INPUT GA BOLE KOSONG!");
+        }
+    }
+
+    function kembali() {
+        document.getElementById("page").style.animation = "fadingOut 1s forwards";
+        document.getElementById("page").addEventListener("animationend", function() {
+            document.getElementById("page").style.opacity = 0;
+            window.location.href = a;
+            sessionStorage.removeItem("pccasual");
+            sessionStorage.removeItem("pccina");
+            sessionStorage.removeItem("pcbali");
+
+            sessionStorage.removeItem("backdrop");
+            sessionStorage.removeItem("lampion");
+            sessionStorage.removeItem("depan");
+            sessionStorage.removeItem("pelaminan");
+            sessionStorage.removeItem("meja_tamu");
+            sessionStorage.removeItem("prasmanan");
+            sessionStorage.removeItem("gayor");
+            sessionStorage.removeItem("stand");
+            sessionStorage.removeItem("paketCustom");
+        });
+    }
+
+    window.onload = function() {
+        if(sessionStorage.getItem("style") == "bali") {
+            document.getElementById("pilihanDekorasi").innerHTML = "";
+
+            document.getElementById("pilihanDekorasi").innerHTML += "ANDA MEMESAN DEKORASI WEDDING BALINESE <br>";
+            document.getElementById("pilihanDekorasi").innerHTML += "DENGAN PILIHAN DEKORASI : <br><br>";
+            document.getElementById("pilihanDekorasi").innerHTML += "DEPAN <br>";
+            document.getElementById("pilihanDekorasi").innerHTML += "<img src='/"+sessionStorage.getItem("gayor")+"'>";
+            document.getElementById("pilihanDekorasi").innerHTML += "<br>";
+            document.getElementById("pilihanDekorasi").innerHTML += "<br>";
+
+            document.getElementById("pilihanDekorasi").innerHTML += "PELAMINAN <br>";
+            document.getElementById("pilihanDekorasi").innerHTML += "<img src='/"+sessionStorage.getItem("pelaminan")+"'>";
+            document.getElementById("pilihanDekorasi").innerHTML += "<br>";
+            document.getElementById("pilihanDekorasi").innerHTML += "<br>";
+
+            document.getElementById("pilihanDekorasi").innerHTML += "MEJA TAMU <br>";
+            document.getElementById("pilihanDekorasi").innerHTML += "<img src='/"+sessionStorage.getItem("meja_tamu")+"'>";
+            document.getElementById("pilihanDekorasi").innerHTML += "<br>";
+            document.getElementById("pilihanDekorasi").innerHTML += "<br>";
+
+            document.getElementById("pilihanDekorasi").innerHTML += "STAND <br>";
+            document.getElementById("pilihanDekorasi").innerHTML += "<img src='/"+sessionStorage.getItem("stand")+"'>";
+            document.getElementById("pilihanDekorasi").innerHTML += "<br>";
+            document.getElementById("pilihanDekorasi").innerHTML += "<br>";
+
+            document.getElementById("pilihanDekorasi").innerHTML += "MOHON LENGKAPI DATA DIBAWAH INI!";
+
+            if(sessionStorage.getItem("paketCustom") == "true") {
+                document.getElementById("pilihanDekorasi").innerHTML = "";
+
+                document.getElementById("pilihanDekorasi").innerHTML += "ANDA MEMESAN DEKORASI WEDDING BALINESE <br>";
+                document.getElementById("pilihanDekorasi").innerHTML += "DENGAN PILIHAN DEKORASI CUSTOM : ";
+                document.getElementById("pilihanDekorasi").innerHTML += "<br>";
+                document.getElementById("pilihanDekorasi").innerHTML += "<br>";
+                document.getElementById("pilihanDekorasi").innerHTML += "<textarea disabled>"+sessionStorage.getItem("pcbali")+"</textarea>"
+                document.getElementById("pilihanDekorasi").innerHTML += "<br>";
+                document.getElementById("pilihanDekorasi").innerHTML += "<br>";
+
+                document.getElementById("pilihanDekorasi").innerHTML += "MOHON LENGKAPI DATA DIBAWAH INI!";
+            }
+
+            a = "/pages/weding/styles/s_wding bali.html";
+            bodycolor = "background-color: rgb(255, 242, 200);";
+        }
+
+        if(sessionStorage.getItem("style") == "casual") {
+            document.getElementById("pilihanDekorasi").innerHTML = "";
+
+            document.getElementById("pilihanDekorasi").innerHTML += "ANDA MEMESAN DEKORASI WEDDING CASUAL <br>";
+            document.getElementById("pilihanDekorasi").innerHTML += "DENGAN PILIHAN DEKORASI : <br><br>";
+            document.getElementById("pilihanDekorasi").innerHTML += "DEPAN <br>";
+            document.getElementById("pilihanDekorasi").innerHTML += "<img src='/"+sessionStorage.getItem("depan")+"'>";
+            document.getElementById("pilihanDekorasi").innerHTML += "<br>";
+            document.getElementById("pilihanDekorasi").innerHTML += "<br>";
+
+            document.getElementById("pilihanDekorasi").innerHTML += "PELAMINAN <br>";
+            document.getElementById("pilihanDekorasi").innerHTML += "<img src='/"+sessionStorage.getItem("pelaminan")+"'>";
+            document.getElementById("pilihanDekorasi").innerHTML += "<br>";
+            document.getElementById("pilihanDekorasi").innerHTML += "<br>";
+
+            document.getElementById("pilihanDekorasi").innerHTML += "MEJA TAMU <br>";
+            document.getElementById("pilihanDekorasi").innerHTML += "<img src='/"+sessionStorage.getItem("meja_tamu")+"'>";
+            document.getElementById("pilihanDekorasi").innerHTML += "<br>";
+            document.getElementById("pilihanDekorasi").innerHTML += "<br>";
+
+            document.getElementById("pilihanDekorasi").innerHTML += "PRASMANAN <br>";
+            document.getElementById("pilihanDekorasi").innerHTML += "<img src='/"+sessionStorage.getItem("prasmanan")+"'>";
+            document.getElementById("pilihanDekorasi").innerHTML += "<br>";
+            document.getElementById("pilihanDekorasi").innerHTML += "<br>";
+
+            document.getElementById("pilihanDekorasi").innerHTML += "MOHON LENGKAPI DATA DIBAWAH INI!";
+
+            if(sessionStorage.getItem("paketCustom") == "true") {
+                document.getElementById("pilihanDekorasi").innerHTML = "";
+
+                document.getElementById("pilihanDekorasi").innerHTML += "ANDA MEMESAN DEKORASI WEDDING CASUAL <br>";
+                document.getElementById("pilihanDekorasi").innerHTML += "DENGAN PILIHAN DEKORASI CUSTOM : ";
+                document.getElementById("pilihanDekorasi").innerHTML += "<br>";
+                document.getElementById("pilihanDekorasi").innerHTML += "<br>";
+                document.getElementById("pilihanDekorasi").innerHTML += "<textarea disabled>"+ sessionStorage.getItem("pccasual") +"</textarea>"
+                document.getElementById("pilihanDekorasi").innerHTML += "<br>";
+                document.getElementById("pilihanDekorasi").innerHTML += "<br>";
+
+                document.getElementById("pilihanDekorasi").innerHTML += "MOHON LENGKAPI DATA DIBAWAH INI!";
+            }
+
+            a= "/pages/weding/styles/s_wding casual.html";
+            bodycolor = "background-color: rgb(211, 211, 211);";
+        }
+
+        if(sessionStorage.getItem("style") == "cina") {
+            document.getElementById("pilihanDekorasi").innerHTML = "";
+
+            document.getElementById("pilihanDekorasi").innerHTML += "ANDA MEMESAN DEKORASI WEDDING CHINESE <br>";
+            document.getElementById("pilihanDekorasi").innerHTML += "DENGAN PILIHAN DEKORASI : <br><br>";
+            document.getElementById("pilihanDekorasi").innerHTML += "BACKDROP <br>";
+            document.getElementById("pilihanDekorasi").innerHTML += "<img src='/"+sessionStorage.getItem("backdrop")+"'>";
+            document.getElementById("pilihanDekorasi").innerHTML += "<br>";
+            document.getElementById("pilihanDekorasi").innerHTML += "<br>";
+
+            document.getElementById("pilihanDekorasi").innerHTML += "PELAMINAN <br>";
+            document.getElementById("pilihanDekorasi").innerHTML += "<img src='/"+sessionStorage.getItem("pelaminan")+"'>";
+            document.getElementById("pilihanDekorasi").innerHTML += "<br>";
+            document.getElementById("pilihanDekorasi").innerHTML += "<br>";
+
+            document.getElementById("pilihanDekorasi").innerHTML += "MEJA TAMU <br>";
+            document.getElementById("pilihanDekorasi").innerHTML += "<img src='/"+sessionStorage.getItem("meja_tamu")+"'>";
+            document.getElementById("pilihanDekorasi").innerHTML += "<br>";
+            document.getElementById("pilihanDekorasi").innerHTML += "<br>";
+
+            document.getElementById("pilihanDekorasi").innerHTML += "LAMPION <br>";
+            document.getElementById("pilihanDekorasi").innerHTML += "<img src='/"+sessionStorage.getItem("lampion")+"'>";
+            document.getElementById("pilihanDekorasi").innerHTML += "<br>";
+            document.getElementById("pilihanDekorasi").innerHTML += "<br>";
+
+            document.getElementById("pilihanDekorasi").innerHTML += "MOHON LENGKAPI DATA DIBAWAH INI!";
+
+            if(sessionStorage.getItem("paketCustom") == "true") {
+                document.getElementById("pilihanDekorasi").innerHTML = "";
+
+                document.getElementById("pilihanDekorasi").innerHTML += "ANDA MEMESAN DEKORASI WEDDING CHINESE <br>";
+                document.getElementById("pilihanDekorasi").innerHTML += "DENGAN PILIHAN DEKORASI CUSTOM : ";
+                document.getElementById("pilihanDekorasi").innerHTML += "<br>";
+                document.getElementById("pilihanDekorasi").innerHTML += "<br>";
+                document.getElementById("pilihanDekorasi").innerHTML += "<textarea disabled>"+sessionStorage.getItem("pccina")+"</textarea>"
+                document.getElementById("pilihanDekorasi").innerHTML += "<br>";
+                document.getElementById("pilihanDekorasi").innerHTML += "<br>";
+
+                document.getElementById("pilihanDekorasi").innerHTML += "MOHON LENGKAPI DATA DIBAWAH INI!";
+            }
+
+            a = "/pages/weding/styles/s_wding cina.html";
+            bodycolor = "background-color: rgb(24, 4, 4);";
+        }
+
+        document.getElementById("page").style = bodycolor;
+        console.log(bodycolor);
+    }
+</script>
+
+<style>
+    .sbtn {
+        transition: all 0.3s;
+    }
+    .sbtn:active {
+        transform: scale(0.95);
+    }
+    textarea {
+        width: 96%; height: 280px;
+        border-radius: 10px;
+        border: none;
+        padding: 2%;
+        font-size: 25px;
+        font-family: monospace;
+        resize: none;
+        box-shadow: 0 0 10px inset black;
+        overflow: hidden;
+    }
+    body {
+        font-size: 25px;
+        font-family: monospace;
+    }
+    .panel {
+        margin: auto;
+        width: 800px; height: auto;
+        border-radius: 20px;
+        background-color: #dadada;
+        padding: 20px;
+    }
+    .input {
+        width: 95%; height: auto;
+        background-color: #bababa;
+        margin: auto;
+        border-radius: 20px;
+        padding: 20px;
+    }
+    .input input {
+        width: 95%; height: 20px;
+        border-radius: 10px;
+        padding: 10px;
+        border: none;
+        margin-bottom: 20px;
+    }
+    .input button {
+        width: 150px;
+        margin: auto;
+        padding: 10px;
+        border-radius: 10px;
+        height: 40px;
+        margin-bottom: 20px;
+        border: none;
+        cursor: pointer;
+    }
+    img {
+        width: 250px; height: 250px;
+        object-fit: cover;
+        border-radius: 20px;
+    }
+</style>

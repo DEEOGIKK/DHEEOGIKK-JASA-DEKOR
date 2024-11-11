@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PILIH PAKET</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body id="page">
+    <div class="mainPage">
+        <div class="infoPage" id="infoPage">
+            <h1>GENDER REVEAL DECORATION</h1>
+            <h2 style="text-align: center; margin-top: -50px;">SILAHKAN PILIH PAKET</h2>
+        </div>
+        <br>
+        <br>
+        <br>
+        <div style="display: flex; flex-direction: row;"> 
+            <div class="mnubtn" onclick="pw_1()">
+                <img src="/imgs/Gender Reveal/Paket 1/gv4.jpeg">
+                <p>PAKET 1</p>
+            </div>
+            <div class="mnubtn" onclick="pw_2()">
+                <img src="/imgs/Gender Reveal/Paket 2/gv6.jpeg">
+                <p>PAKET 2</p>
+            </div>
+            <div class="mnubtn" onclick="pw_3()">
+                <img src="/imgs/Gender Reveal/Paket 2/gv7.jpeg">
+                <p>PAKET CUSTOM</p>
+            </div>
+        </div>
+        <br>
+        <center><button class="backbtn" onclick="pw_back();">BACK</button></center>
+    </div>
+</body>
+</html>
+
+<style>
+    body {
+        background-color: rgb(255, 255, 255);
+        color: black;
+    }
+</style>
+
+<script>
+    function pw_1() {
+        document.getElementById("page").style.animation = "fadingOut 1s forwards";
+        document.getElementById("page").addEventListener("animationend", function() {
+            document.getElementById("page").style.opacity = 0;
+            window.location.href = "/pages/genderreveal/paket/pg1.html";
+        });
+    }
+    function pw_2() {
+        document.getElementById("page").style.animation = "fadingOut 1s forwards";
+        document.getElementById("page").addEventListener("animationend", function() {
+            document.getElementById("page").style.opacity = 0;
+            window.location.href = "/pages/genderreveal/paket/pg2.html";
+        });
+    }
+    function pw_3() {
+        document.getElementById("page").style.animation = "fadingOut 1s forwards";
+        document.getElementById("page").addEventListener("animationend", function() {
+            document.getElementById("page").style.opacity = 0;
+            window.location.href = "/pages/genderreveal/paket/pg3.html";
+        });
+    }
+
+    function pw_back() {
+        document.getElementById("page").style.animation = "fadingOut 1s forwards";
+        document.getElementById("page").addEventListener("animationend", function() {
+            document.getElementById("page").style.opacity = 0;
+            window.location.href = "/index.html";
+        });
+    }
+</script>

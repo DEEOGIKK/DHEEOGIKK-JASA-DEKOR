@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Decoration</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body id="page">
+    <div class="mainPage">
+        <div class="infoPage" id="infoPage">
+            <h1>SELAMAT DATANG DI JASA DEKORASI KAMI!</h1>
+            <h2>MENGAPA MEMILIH KAMI?</h2>
+            <p>
+                <b>Visi Misi:</b> <br>
+                Membuat dekorasi yang indah dan unik, membuat pandangan orang orang terhadap dekorasi tidak hanya itu itu saja.<br>
+                <br>
+                <b>Tim yang profesional:</b><br>
+                Tim kami sudah di uji secara tidak langsung dan mendapat bawah tim kami bekerja tanpa basa basi, dan mempunyai prinsip "jika tidak sekarang, kapan lagi."<br>
+                <br>
+                <b>Tepat waktu dan bersih:</b><br>
+                Kami akan paling lambat 4 hari sebelum hari acara untuk survey tempat, dan langsung saat itu juga kami mempersiapkan kebutuhan dekorasi sesuai keinginan customer. Setelah itu kami akan datang kembali ke lokasi 2 hari sebelum acara untuk mulai membangun dekorasi, dengan tim paling minimal 20 orang, bekerja dengan trampil dan bersih tidak meninggalkan bekas apapun.<br>
+            </p>
+            <hr>
+        </div>
+        <br>
+        <br>
+        <br>
+        <button class="mnubtn" onclick="wding();">WEDDING</button>
+        <button class="mnubtn" onclick="bday();">BIRTHDAY</button>
+        <button class="mnubtn" onclick="gr();">GENDER REVEAL</button>
+    </div>
+</body>
+</html>
+
+<style>
+    .infoPage h2 {
+        font-size: 25px;
+    }
+    .infoPage p {
+        text-align: justify;
+        margin-left: 25px;
+        margin-top: 10px;
+        font-size: 20px;
+    }
+</style>
+
+<script>
+    window.onload = function() {
+        sessionStorage.removeItem("pccasual");
+        sessionStorage.removeItem("pccina");
+        sessionStorage.removeItem("pcbali");
+        sessionStorage.removeItem("style");
+        sessionStorage.removeItem("paketCustom");
+
+        sessionStorage.removeItem("backdrop");
+            sessionStorage.removeItem("lampion");
+            sessionStorage.removeItem("depan");
+            sessionStorage.removeItem("pelaminan");
+            sessionStorage.removeItem("meja_tamu");
+            sessionStorage.removeItem("prasmanan");
+            sessionStorage.removeItem("gayor");
+            sessionStorage.removeItem("stand");
+            sessionStorage.removeItem("paketCustom");
+    }
+    function wding() {
+    document.getElementById("page").style.animation = "fadingOut 1s forwards";
+        document.getElementById("page").addEventListener("animationend", function() {
+            document.getElementById("page").style.opacity = 0;
+            window.location.href = "pages/weding/wding.html";
+        });
+    }
+    function bday() {
+        document.getElementById("page").style.animation = "fadingOut 1s forwards";
+        document.getElementById("page").addEventListener("animationend", function() {
+            document.getElementById("page").style.opacity = 0;
+            window.location.href = "pages/birthday/birthday.html";
+        });
+    }
+    function gr() {
+        document.getElementById("page").style.animation = "fadingOut 1s forwards";
+        document.getElementById("page").addEventListener("animationend", function() {
+            document.getElementById("page").style.opacity = 0;
+            window.location.href = "pages/genderreveal/genderreveal.html";
+        });
+    }
+</script>

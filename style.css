@@ -1,0 +1,97 @@
+body {
+    user-select: none;
+    font-family: monospace;
+}
+
+.mainPage {
+    animation: fadingIn 1s forwards;
+    justify-items: center;
+}
+.mnubtn {
+    width: 250px; height: 250px;
+    margin: auto 25px auto 25px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+.mnubtn img {
+    height: 100%; width: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+}
+.mnubtn p {
+    text-align: center;
+    font-size: 25px;
+    margin-top: -50px;
+    text-shadow: 2px 2px 10px black;
+    color: white;
+}
+.mnubtn:hover {
+    transform: scale(1.05);
+}
+.mnubtn:active {
+    transform: scale(1);
+}
+.backbtn {
+    width: 150px;
+    height: 40px;
+    border-radius: 10px;
+    margin-top: 40px;
+    border: none;
+    cursor: pointer;
+    background-color: #ffffff;
+    border: solid 1px #2e2a27;
+    transition: all 0.3s;
+}
+.backbtn:active {
+    transform: scale(0.95);
+}
+.infoPage {
+    width: 900px;
+    font-size: 15px;
+}
+.infoPage h1 {
+    text-align: center;
+    margin: 50px auto 50px auto;
+}
+.infoPage p {
+    margin-top: -15px;
+}
+
+@keyframes fadingOut {
+    from {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    to {
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+}
+@keyframes fadingIn {
+    from {
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.active {
+    transform: scale(1.08);
+    transition: all 0.3s;
+}
+.inactive img {
+    opacity: 50%;
+    filter: blur(2px);
+}
+.active img {
+    transform: scale(1.05);
+    transition: all 0.6s;
+}
+
+.panel img {
+    transition: all 0.6s;
+}

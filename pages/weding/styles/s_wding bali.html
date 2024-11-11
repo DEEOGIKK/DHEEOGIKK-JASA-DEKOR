@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PILIH PAKET</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body id="page">
+    <div class="mainPage">
+        <div class="infoPage" id="infoPage">
+            <h1>TERIMAKASIH SUDAH MEMILIH!</h1>
+            <h2 style="text-align: center; margin-top: -50px;">SILAHKAN PILIH PAKET</h2>
+        </div>
+        <br>
+        <br>
+        <br>
+        <div style="display: flex; flex-direction: row;"> 
+            <div class="mnubtn" onclick="pw_1()">
+                <img src="/imgs/Wedding/Balinese/Paket 1/Pelaminan/pel3.jpg">
+                <p>PAKET 1</p>
+            </div>
+            <div class="mnubtn" onclick="pw_2()">
+                <img src="/imgs/Wedding/Balinese/Paket 2/Pelaminan/pel1.jpg">
+                <p>PAKET 2</p>
+            </div>
+            <div class="mnubtn" onclick="pw_3()">
+                <img src="/imgs/Wedding/Balinese/Paket 2/Pelaminan/pel2.jpg">
+                <p>PAKET CUSTOM</p>
+            </div>
+        </div>
+        <br>
+        <center><button class="backbtn" onclick="pw_back();">BACK</button></center>
+    </div>
+</body>
+</html>
+
+<style>
+    body {
+        background-color: rgb(255, 242, 200);
+        color: black;
+    }
+</style>
+
+<script>
+    window.onload = function() {
+        sessionStorage.removeItem("backdrop");
+        sessionStorage.removeItem("lampion");
+        sessionStorage.removeItem("depan");
+        sessionStorage.removeItem("pelaminan");
+        sessionStorage.removeItem("meja_tamu");
+        sessionStorage.removeItem("prasmanan");
+        sessionStorage.removeItem("gayor");
+        sessionStorage.removeItem("stand");
+        sessionStorage.removeItem("paketCustom");
+    }
+
+    function pw_1() {
+        document.getElementById("page").style.animation = "fadingOut 1s forwards";
+        document.getElementById("page").addEventListener("animationend", function() {
+            document.getElementById("page").style.opacity = 0;
+            window.location.href = "paket bali/pwb1.html";
+        });
+    }
+    function pw_2() {
+        document.getElementById("page").style.animation = "fadingOut 1s forwards";
+        document.getElementById("page").addEventListener("animationend", function() {
+            document.getElementById("page").style.opacity = 0;
+            window.location.href = "paket bali/pwb2.html";
+        });
+    }
+    function pw_3() {
+        document.getElementById("page").style.animation = "fadingOut 1s forwards";
+        document.getElementById("page").addEventListener("animationend", function() {
+            document.getElementById("page").style.opacity = 0;
+            window.location.href = "paket bali/pwb3.html";
+        });
+    }
+
+    function pw_back() {
+        document.getElementById("page").style.animation = "fadingOut 1s forwards";
+        document.getElementById("page").addEventListener("animationend", function() {
+            document.getElementById("page").style.opacity = 0;
+            window.location.href = "/pages/weding/wding.html";
+        });
+    }
+</script>

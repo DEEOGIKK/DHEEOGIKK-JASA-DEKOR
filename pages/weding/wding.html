@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WEDDING DECORATION</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body id="page">
+    <div class="mainPage">
+        <div class="infoPage" id="infoPage">
+            <h1>TERIMAKASIH SUDAH MEMILIH!</h1>
+            <h2 style="text-align: center;">SILAHKAN PILIH STYLE DEKORASI!</h2>
+        </div>
+        <br>
+        <br>
+        <br>
+        <div style="display: flex; flex-direction: row;"> 
+            <div class="mnubtn" onclick="s_ba()">
+                <img src="/imgs/Wedding/Balinese/Paket 1/Pelaminan/pel3.jpg">
+                <p>BALINESE</p>
+            </div>
+            <div class="mnubtn" onclick="s_ca()">
+                <img src="/imgs/Wedding/Casual/Paket 2/Pelaminan/pel2.jpeg">
+                <p>CASUAL</p>
+            </div>
+            <div class="mnubtn" onclick="s_cl()">
+                <img src="/imgs/Wedding/Chinese/Paket 1/Pelaminan/pelaminan2.jpg">
+                <p>CHINESE</p>
+            </div>
+        </div>
+        <br>
+        <center><button class="backbtn" onclick="backKeAwal();">BACK</button></center>
+    </div>
+</body>
+</html>
+
+<script>
+    function s_ba() {
+        document.getElementById("page").style.animation = "fadingOut 1s forwards";
+        document.getElementById("page").addEventListener("animationend", function() {
+            document.getElementById("page").style.opacity = 0;
+            window.location.href = "styles/s_wding bali.html";
+            sessionStorage.setItem("style", "bali");
+        });
+    }
+    function s_ca() {
+        document.getElementById("page").style.animation = "fadingOut 1s forwards";
+        document.getElementById("page").addEventListener("animationend", function() {
+            document.getElementById("page").style.opacity = 0;
+            window.location.href = "styles/s_wding casual.html";
+            sessionStorage.setItem("style", "casual");
+        });
+    }
+    function s_cl() {//cina bukan clasic
+        document.getElementById("page").style.animation = "fadingOut 1s forwards";
+        document.getElementById("page").addEventListener("animationend", function() {
+            document.getElementById("page").style.opacity = 0;
+            window.location.href = "styles/s_wding cina.html";
+            sessionStorage.setItem("style", "cina");
+        });
+    }
+
+    function backKeAwal() {
+        document.getElementById("page").style.animation = "fadingOut 1s forwards";
+        document.getElementById("page").addEventListener("animationend", function() {
+            document.getElementById("page").style.opacity = 0;
+            window.location.href = "/index.html";
+        });
+    }
+</script>

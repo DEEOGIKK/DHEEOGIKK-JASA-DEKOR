@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WEDDING - BALINESE - PAKET 2</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body id="page">
+    <script src="/main.js"></script>
+    <div class="mainPage">
+        <div class="infoPage" id="infoPage">
+            <h1>SILAHKAN PILIH!</h1>
+
+
+
+            <h2>GAYOR</h2>
+            <div class="container gayor" id="container">
+                <div class="panel" id="p-gyr-4" onclick="selectPanel('gayor', 'p-gyr-4', 'imgs/Wedding/Balinese/Paket 2/Gayor/gyr1.jpg')">
+                    <img src="/imgs/Wedding/Balinese/Paket 2/Gayor/gyr1.jpg">
+                </div>
+                <div class="panel" id="p-gyr-5" onclick="selectPanel('gayor', 'p-gyr-5', 'imgs/Wedding/Balinese/Paket 2/Gayor/gyr2.jpg')">
+                    <img src="/imgs/Wedding/Balinese/Paket 2/Gayor/gyr2.jpg">
+                </div>
+                <div class="panel" id="p-gyr-6" onclick="selectPanel('gayor', 'p-gyr-6', 'imgs/Wedding/Balinese/Paket 2/Gayor/gyr3.jpg')">
+                    <img src="/imgs/Wedding/Balinese/Paket 2/Gayor/gyr3.jpg">
+                </div>
+            </div>
+            
+
+
+            <h2>PELAMINAN</h2>
+            <div class="container pelaminan" id="container">
+                <div class="panel" id="p-pel-4" onclick="selectPanel('pelaminan', 'p-pel-4', 'imgs/Wedding/Balinese/Paket 2/Pelaminan/pel1.jpg')">
+                    <img src="/imgs/Wedding/Balinese/Paket 2/Pelaminan/pel1.jpg">
+                </div>
+                <div class="panel" id="p-pel-5" onclick="selectPanel('pelaminan', 'p-pel-5', 'imgs/Wedding/Balinese/Paket 2/Pelaminan/pel2.jpg')">
+                    <img src="/imgs/Wedding/Balinese/Paket 2/Pelaminan/pel2.jpg">
+                </div>
+                <div class="panel" id="p-pel-6" onclick="selectPanel('pelaminan', 'p-pel-6', 'imgs/Wedding/Balinese/Paket 2/Pelaminan/pel3.jpg')">
+                    <img src="/imgs/Wedding/Balinese/Paket 2/Pelaminan/pel3.jpg">
+                </div>
+            </div>
+
+
+
+            <h2>MEJA TAMU</h2>
+            <div class="container meja_tamu" id="container">
+                <div class="panel" id="p-mta-4" onclick="selectPanel('meja_tamu', 'p-mta-4', 'imgs/Wedding/Balinese/Paket 2/Meja Tamu/meta1.jpg')">
+                    <img src="/imgs/Wedding/Balinese/Paket 2/Meja Tamu/meta1.jpg">
+                </div>
+                <div class="panel" id="p-mta-5" onclick="selectPanel('meja_tamu', 'p-mta-5', 'imgs/Wedding/Balinese/Paket 2/Meja Tamu/meta2.jpg')">
+                    <img src="/imgs/Wedding/Balinese/Paket 2/Meja Tamu/meta2.jpg">
+                </div>
+                <div class="panel" id="p-mta-6" onclick="selectPanel('meja_tamu', 'p-mta-6', 'imgs/Wedding/Balinese/Paket 2/Meja Tamu/meta3.jpg')">
+                    <img src="/imgs/Wedding/Balinese/Paket 2/Meja Tamu/meta3.jpg">
+                </div>
+            </div>
+
+
+
+            <h2>STAND</h2>
+            <div class="container stand" id="container">
+                <div class="panel" id="p-stand-4" onclick="selectPanel('stand', 'p-stand-4', 'imgs/Wedding/Balinese/Paket 2/Stand/st1.jpg')">
+                    <img src="/imgs/Wedding/Balinese/Paket 2/Stand/st1.jpg">
+                </div>
+                <div class="panel" id="p-stand-5" onclick="selectPanel('stand', 'p-stand-5', 'imgs/Wedding/Balinese/Paket 2/Stand/st2.jpg')">
+                    <img src="/imgs/Wedding/Balinese/Paket 2/Stand/st2.jpg">
+                </div>
+                <div class="panel" id="p-stand-6" onclick="selectPanel('stand', 'p-stand-6', 'imgs/Wedding/Balinese/Paket 2/Stand/st3.jpg')">
+                    <img src="/imgs/Wedding/Balinese/Paket 2/Stand/st3.jpg">
+                </div>
+            </div>
+
+
+
+            <center>
+                <button class="backbtn" onclick="paketweddingbaliback();">BACK</button>
+                <button class="backbtn" onclick="paketweddingbalisubmit();">SUBMIT</button>
+            </center>
+
+
+        </div>
+        <br>
+        <br>
+        <br>
+    </div>
+</body>
+</html>
+
+<style>
+    body {
+        background-color: rgb(255, 242, 200);
+        color: black;
+    }
+    #container {
+        display: flex;
+        width: 800px;
+        margin: auto;
+        margin-bottom: 100px;
+    }
+    .panel {
+        width: 250px; height: 250px;
+        border-radius: 20px;
+        box-shadow: 5px 5px 10px black;
+        margin: auto;
+        transition: all 0.6s;
+        cursor: pointer;
+        overflow: hidden;
+    }
+    h2 {
+        text-align: center;
+    }
+    .panel img {
+        width: 100%; height: 100%;
+        object-fit: cover;
+    }
+</style>

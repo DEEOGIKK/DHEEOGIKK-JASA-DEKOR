@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TERIMAKASIh</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body id="page">
+    <script src="main.js"></script>
+    <div class="mainPage">
+        <div class="a">
+            <h1>TERIMAKASIH SUDAH MEMESAN JASA KAMI!</h1>
+            <hr>
+            <p>
+                KAMI AKAN DATANG BEBERAPA HARI SEBELUM HARI ACARA UNTUK MENGECEK LOKASI
+                DAN AKAN MEMPERSIAPKAN DEKORASI SESUAI YANG ANDA INGIN KAN.
+                KAMI AKAN MENGHUBUNGI ANDA UNTUK INFORMASI LEBIH LANJUT.
+                TERIMAKASIH.
+            </p>
+            <button onclick="kembalikeutama()">KEMBALI KE HALAMAN UTAMA</button>
+        </div>
+    </div>
+</body>
+</html>
+
+<script>
+    function kembalikeutama() {
+        document.getElementById("page").style.animation = "fadingOut 1s forwards";
+        document.getElementById("page").addEventListener("animationend", function() {
+            document.getElementById("page").style.opacity = 0;
+            window.location.href = "index.html";
+        });
+    }
+</script>
+
+<style>
+    body {
+        font-size: 25px;
+    }
+    .a {
+        width: 800px; height: auto;
+        margin: auto;
+        padding: 20px;
+        padding: 20px;
+        background-color: #dadada;
+        border-radius: 20px;
+        margin-top: 20px;
+        padding-top: 10px;
+    }
+    .a p {
+        text-align: justify;
+    }
+    .a button {
+        width: 100%; height: 40px;
+        border-radius: 10px;
+        border: none;
+        cursor: pointer;
+    }
+</style>
