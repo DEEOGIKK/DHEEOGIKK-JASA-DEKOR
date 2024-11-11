@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PILIH PAKET</title>
-    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="./style.css">
 </head>
 <body id="page">
     <div class="mainPage">
@@ -17,15 +17,15 @@
         <br>
         <div style="display: flex; flex-direction: row;"> 
             <div class="mnubtn" onclick="pw_1()">
-                <img src="/imgs/Birthday/Paket 1/d3.jpeg">
+                <img src="./imgs/Birthday/Paket 1/d3.jpeg">
                 <p>PAKET 1</p>
             </div>
             <div class="mnubtn" onclick="pw_2()">
-                <img src="/imgs/Birthday/Paket 2/d4.jpeg">
+                <img src="./imgs/Birthday/Paket 2/d4.jpeg">
                 <p>PAKET 2</p>
             </div>
             <div class="mnubtn" onclick="pw_3()">
-                <img src="/imgs/Birthday/Paket 2/d2.jpeg">
+                <img src="./imgs/Birthday/Paket 2/d2.jpeg">
                 <p>PAKET CUSTOM</p>
             </div>
         </div>
@@ -47,21 +47,21 @@
         document.getElementById("page").style.animation = "fadingOut 1s forwards";
         document.getElementById("page").addEventListener("animationend", function() {
             document.getElementById("page").style.opacity = 0;
-            window.location.href = "/pages/birthday/paket/pb1.html";
+            window.location.href ="./pages/birthday/paket/pb1.html";
         });
     }
     function pw_2() {
         document.getElementById("page").style.animation = "fadingOut 1s forwards";
         document.getElementById("page").addEventListener("animationend", function() {
             document.getElementById("page").style.opacity = 0;
-            window.location.href = "/pages/birthday/paket/pb2.html";
+            window.location.href ="./pages/birthday/paket/pb2.html";
         });
     }
     function pw_3() {
         document.getElementById("page").style.animation = "fadingOut 1s forwards";
         document.getElementById("page").addEventListener("animationend", function() {
             document.getElementById("page").style.opacity = 0;
-            window.location.href = "/pages/birthday/paket/pb3.html";
+            window.location.href ="./pages/birthday/paket/pb3.html";
         });
     }
 
@@ -69,7 +69,7 @@
         document.getElementById("page").style.animation = "fadingOut 1s forwards";
         document.getElementById("page").addEventListener("animationend", function() {
             document.getElementById("page").style.opacity = 0;
-            window.location.href = "/index.html";
+            window.location.href ="./index.html";
         });
     }
 </script>

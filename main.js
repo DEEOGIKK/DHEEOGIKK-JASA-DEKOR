@@ -21,7 +21,7 @@ function paketweddingbaliback() {
     document.getElementById("page").style.animation = "fadingOut 1s forwards";
     document.getElementById("page").addEventListener("animationend", function() {
         document.getElementById("page").style.opacity = 0;
-        window.location.href = "/pages/weding/styles/s_wding bali.html";
+        window.location.href ="./pages/weding/styles/s_wding bali.html";
         
         sessionStorage.removeItem("gayor");
         sessionStorage.removeItem("pelaminan");
@@ -33,7 +33,7 @@ function paketweddingcasualback() {
     document.getElementById("page").style.animation = "fadingOut 1s forwards";
     document.getElementById("page").addEventListener("animationend", function() {
         document.getElementById("page").style.opacity = 0;
-        window.location.href = "/pages/weding/styles/s_wding casual.html";
+        window.location.href ="./pages/weding/styles/s_wding casual.html";
 
         sessionStorage.removeItem("depan");
         sessionStorage.removeItem("pelaminan");
@@ -45,7 +45,7 @@ function paketweddingcinaback() {
     document.getElementById("page").style.animation = "fadingOut 1s forwards";
     document.getElementById("page").addEventListener("animationend", function() {
         document.getElementById("page").style.opacity = 0;
-        window.location.href = "/pages/weding/styles/s_wding cina.html";
+        window.location.href ="./pages/weding/styles/s_wding cina.html";
 
         sessionStorage.removeItem("backdrop");
         sessionStorage.removeItem("pelaminan");
@@ -63,7 +63,7 @@ function paketweddingbalisubmit() {
         document.getElementById("page").addEventListener("animationend", function() {
             document.getElementById("page").style.opacity = 0;
                 sessionStorage.removeItem("paketCustom");
-                window.location.href = "/strukpesanan.html";
+                window.location.href ="./strukpesanan.html";
         });
     }
     else {
@@ -77,7 +77,7 @@ function paketweddingcasualsubmit() {
         document.getElementById("page").addEventListener("animationend", function() {
             document.getElementById("page").style.opacity = 0;
                 sessionStorage.removeItem("paketCustom");
-                window.location.href = "/strukpesanan.html";
+                window.location.href ="./strukpesanan.html";
         });
     }
     else {
@@ -91,7 +91,7 @@ function paketweddingcinasubmit() {
         document.getElementById("page").addEventListener("animationend", function() {
             document.getElementById("page").style.opacity = 0;
                 sessionStorage.removeItem("paketCustom");
-                window.location.href = "/strukpesanan.html";
+                window.location.href ="./strukpesanan.html";
         });
     }
     else {
@@ -107,7 +107,7 @@ function customWeddingbali() {
         document.getElementById("page").style.animation = "fadingOut 1s forwards";
         document.getElementById("page").addEventListener("animationend", function() {
             document.getElementById("page").style.opacity = 0;
-            window.location.href = "/strukpesanan.html";
+            window.location.href ="./strukpesanan.html";
             sessionStorage.setItem("paketCustom", true);
 
             sessionStorage.setItem("pcbali", document.getElementById("teksCustomBali").value);
@@ -124,7 +124,7 @@ function customWeddingcasual() {
         document.getElementById("page").style.animation = "fadingOut 1s forwards";
         document.getElementById("page").addEventListener("animationend", function() {
             document.getElementById("page").style.opacity = 0;
-            window.location.href = "/strukpesanan.html";
+            window.location.href ="./strukpesanan.html";
             sessionStorage.setItem("paketCustom", true);
             
             sessionStorage.setItem("pccasual", document.getElementById("teksCustomCasual").value);
@@ -141,7 +141,7 @@ function customWeddingcina() {
         document.getElementById("page").style.animation = "fadingOut 1s forwards";
         document.getElementById("page").addEventListener("animationend", function() {
             document.getElementById("page").style.opacity = 0;
-            window.location.href = "/strukpesanan.html";
+            window.location.href ="./strukpesanan.html";
             sessionStorage.setItem("paketCustom", true);
     
             sessionStorage.setItem("pccina", document.getElementById("teksCustomCina").value);
@@ -158,7 +158,7 @@ function paketbdayback() {
     document.getElementById("page").addEventListener("animationend", function() {
         document.getElementById("page").style.opacity = 0;
             sessionStorage.removeItem("paketCustom");
-            window.location.href = "/pages/birthday/birthday.html";
+            window.location.href ="./pages/birthday/birthday.html";
     });
 }
 
@@ -167,6 +167,6 @@ function paketgvback() {
     document.getElementById("page").addEventListener("animationend", function() {
         document.getElementById("page").style.opacity = 0;
             sessionStorage.removeItem("paketCustom");
-            window.location.href = "/pages/genderreveal/genderreveal.html";
+            window.location.href ="./pages/genderreveal/genderreveal.html";
     });
 }
